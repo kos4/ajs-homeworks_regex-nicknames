@@ -12,6 +12,6 @@ test.each([
   ['t3-333_ds', true],
   ['t3-3333_ds', false],
 ])('validate nickname "%s"', (nickname, expected) => {
-  const validator = new Validator();
-  expect(validator.validateUsername(nickname)).toBe(expected);
+  const validator = new Validator(nickname);
+  expect(validator.validateUsername()).toBe(expected);
 });
